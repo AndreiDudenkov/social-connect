@@ -6,8 +6,8 @@ import {Header} from "./user_page/Header";
 const App = () => {
     return (
         <div>
-            <div><Header/></div>
-            <div><Technologies /></div>
+            <Header ageValue={32} />
+            <Technologies />
         </div>
     );
 }
