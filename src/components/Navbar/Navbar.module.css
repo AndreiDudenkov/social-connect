@@ -3,6 +3,9 @@
     grid-area: nav;
     background-color: lightskyblue;
 }
-.items {
+.item {
     color: white;
+}
+.item.active {
+    color: #4e8d62;
 }
