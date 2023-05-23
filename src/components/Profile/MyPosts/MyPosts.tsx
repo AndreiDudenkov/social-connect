@@ -12,11 +12,10 @@ export const MyPosts = () => {
                     New post
                 </div>
                 <div className={s.item}>
-                    <MyPost/>
-                    <MyPost/>
-                    <MyPost/>
-                    <MyPost/>
-                    <MyPost/>
+                    <MyPost message = {"Hello, how are you?"} likes={5}/>
+                    <MyPost message = {"I'm fine."} likes={10}/>
+                    <MyPost message = {"Bye"} likes={15}/>
+
 
                 </div>
 
