@@ -11,6 +11,11 @@
     'nav content';
 }
 
+.app-wrapper-content {
+    grid-area: content ;
+    background-color: #102646;
+    color: #4e8d62;
+}
 
 
 
