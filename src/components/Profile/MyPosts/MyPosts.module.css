@@ -1,4 +1,7 @@
 
-.item {
-    color: #c40fe0;
+.postsBlock {
+    padding: 10px;
+}
+.posts {
+    margin-top: 10px;
 }
