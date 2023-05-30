@@ -2,8 +2,21 @@ import React from 'react';
 import s from './MyPosts.module.css'
 import {MyPost} from './Post/MyPost';
 
+type PostType = {
+    message: string
+    likes: number
+}
 
-export const MyPosts = () => {
+type MyPostsType = {
+    posts: PostType[]
+}
+
+
+export const MyPosts:React.FC<MyPostsType> = ({posts}) => {
+
+    const postElement = posts.map(p=><MyPost message={p.message} likes={p.likes}/>)
+
+
     return (
         <div className={s.postsBlock}>
             <h3> My posts</h3>
@@ -16,9 +29,7 @@ export const MyPosts = () => {
                 </div>
             </div>
             <div className={s.posts}>
-                <MyPost message={'Hello, how are you?'} likes={5}/>
-                <MyPost message={'I\'m fine.'} likes={10}/>
-                <MyPost message={'Bye'} likes={15}/>
+                {postElement}
             </div>
 
         </div>
