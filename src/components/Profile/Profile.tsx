@@ -1,18 +1,15 @@
 import React from 'react';
 import {MyPosts} from './MyPosts/MyPosts';
 import {ProfileInfo} from './ProfileInfo/ProfileInfo';
+import {PostType} from '../../App';
+
+export type ProfileType = {
+    posts: PostType[]
+}
 
 
+export const Profile:React.FC<ProfileType> = ({posts}) => {
 
-
-
-export const Profile = () => {
-    const posts = [
-        {message:'Hello, how are you?', likes: 5},
-        {message:'I\'m fine.', likes: 10},
-        {message:'Bye', likes: 15},
-
-    ]
     return (
         <div>
             <ProfileInfo
