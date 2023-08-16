@@ -20,11 +20,19 @@ export const state  = {
     },
     profilePage: {
         posts: [
-            {message:'Hello, how are you?', likes: 5},
-            {message:'I\'m fine.', likes: 10},
-            {message:'Bye', likes: 15},
-
+            {id : '1',message:'Hello, how are you?', likes: 5},
+            {id : '2',message:'I\'m fine.', likes: 10},
+            {id : '3',message:'Bye', likes: 15},
         ]
     }
-
 }
+export const addPost = (postMessage:string) => {
+    const newPost = {
+        id : '4',
+        message : postMessage,
+        likes: 5
+    }
+    state.profilePage.posts.push(newPost)
+    console.log(state.profilePage.posts)
+}
+

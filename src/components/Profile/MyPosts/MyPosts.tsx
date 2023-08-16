@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import s from './MyPosts.module.css'
 import {MyPost} from './Post/MyPost';
 import {PostType} from '../../../App';
+import {addPost} from '../../../redux/state';
 
 
 type MyPostsType = {
@@ -16,8 +17,9 @@ export const MyPosts: React.FC<MyPostsType> = ({posts}) => {
     let newPostElement = useRef<HTMLTextAreaElement>(null)
 
     const addPostHandler = () => {
-         let text = newPostElement.current !== null? newPostElement.current.value: null
-         console.log(text)
+
+        let text = newPostElement.current !== null ? newPostElement.current.value : ''
+        addPost(text)
     }
 
     return (

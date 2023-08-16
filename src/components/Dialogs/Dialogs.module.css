@@ -21,3 +21,8 @@ padding: 10px;
 .message{
 
 }
+.textarea{
+    display: flex;
+    margin: 10px 50px 0 0;
+    width: 80%;
+}

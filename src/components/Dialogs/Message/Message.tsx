@@ -9,7 +9,7 @@ type MessageType = {
 }
 export const Message: React.FC<MessageType> = ({message,id}) => {
     return (
-        <div className={s.message} key={id}>{message}</div>
+            <div className={s.message} key={id}>{message}</div>
     );
 };
 
